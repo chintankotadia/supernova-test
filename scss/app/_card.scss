@@ -1,0 +1,55 @@
+.product-cards__wrapper {
+  overflow: hidden;
+  padding-top: 2rem;
+
+  .carousel {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @include responsive(xl) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.product-card {
+  &__media {
+    position: relative;
+
+    .badge--image {
+      right: -0.5rem;
+      top: -0.5rem;
+    }
+  }
+
+  picture {
+    &:before {
+      padding-bottom: 100%;
+
+      @include responsive(lg) {
+        padding-bottom: 80%;
+      }
+    }
+  }
+
+  &__reviews {
+    font-size: 1.4rem;
+    line-height: 1.14;
+  }
+
+  &__price {
+    .product-card__regular + 
+    .product-card__sale {
+      padding-left: 1rem;
+    }
+  }
+
+  &__controls {
+    .btn {
+      @include responsive(xl) {
+        width: 100%;
+      }
+    }
+  }
+}

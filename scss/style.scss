@@ -1,0 +1,18 @@
+/*
+ * Filename : style.scss
+ *
+ * @author Chintan Kotadia <kotadiachintan@gmail.com>
+ * 
+ * Contains all the styles of main application
+ * via importing all the individual scss files
+ */
+
+@import "app/settings";
+@import "app/fonts";
+@import "app/mixins";
+@import "app/base";
+@import "app/buttons";
+@import "app/input";
+@import "app/card";
+@import "app/carousel";
+@import "app/elements";

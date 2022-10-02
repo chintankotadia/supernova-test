@@ -1,0 +1,59 @@
+/**
+ * Holds all the variables used across the system
+ *
+ * @author Chintan Kotadia <kotadiachintan@gmail.com>
+ */
+
+//different paths
+$fonts-path: '../fonts/' !default;
+$images-path: '../images/' !default;
+
+//Different type of colors
+$color-white: #fff;
+$color-black: #000;
+$color-main: #151515;
+$color-main-light-pink: #FFF2F4;
+$color-main-ui-cta: #F4436C;
+
+//Bootstrap overrides
+$primary: $color-main-ui-cta;
+
+$body-color: $color-main;
+$link-color: $color-main-ui-cta;
+$link-hover-color: $color-main-ui-cta;
+
+//breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1210px
+);
+
+//button
+$btn-line-height: 1.25;
+$btn-padding-x: 5.2rem;
+$btn-padding-y: 1.3rem;
+$btn-border-radius: 0.8rem;
+$btn-border-width: 0.2rem;
+
+//Fonts
+$font-family-type1: 'Sofia Pro', 'Calibri', 'Trebuchet MS', Helvetica, Arial, Sans-serif;
+
+//Body Settings
+$body-font-family: $font-family-type1;
+$body-font-size: 1.6rem;
+$body-line-height: 1.5;
+
+//Bootstrap fonts override
+$font-family-sans-serif: $body-font-family;
+$font-size-base: $body-font-size;
+$headings-line-height: 1.2;

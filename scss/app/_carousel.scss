@@ -1,0 +1,187 @@
+.carousel__half-slides {
+  overflow: hidden;
+
+  @include responsive(xl) {
+    overflow: visible;
+  }
+
+  .carousel-control {
+    opacity: 1.0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 4rem;
+
+    .icon-next,
+    .icon-prev {
+      &:before {
+        content: '';
+        background: $color-main-light-pink;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: calc(50% - 10.8rem);
+      }
+
+      &:after {
+        top: calc(50% - 9.5rem);
+      }
+    }
+
+    .icon-next {
+      &:before {
+        right: -4rem;
+      }
+
+      &:after {
+        right: -2.4rem;
+      }
+    }
+
+    .icon-prev {
+      &:before {
+        left: -4rem;
+      }
+
+      &:after {
+        left: -2.4rem;
+      }
+    }
+  }
+
+  .carousel-control-prev {
+    left: 15%;
+
+    @include responsive(md) {
+      left: 10%
+    }
+
+    @include responsive(xl) {
+      left: 0;
+    }
+  }
+
+  .carousel-control-next {
+    right: 15%;
+
+    @include responsive(md) {
+      right: 10%
+    }
+
+    @include responsive(xl) {
+      right: 0;
+    }
+  }
+
+  .product-card {
+    float: left;
+    position: relative;
+    width: 70%;
+    padding: 0.5rem 0.75rem 0;
+    left: 15%;
+    z-index: 1;
+
+    @include responsive(md) {
+      width: 40%;
+      left: 10%;
+      right: auto;
+    }
+
+    @include responsive(xl) {
+      width: 32.50%;
+      padding: 0.5rem 1.5rem 0;
+      left: calc(15% + 2.9rem);
+    }
+  }
+
+  .product-card:last-child {
+    display: none;
+
+    @include responsive(md) {
+      display: block;
+      position: absolute;
+      left: auto;
+      right: calc(-27% - 2.25rem);
+    }
+
+    @include responsive(xl) {
+      width: 32.50%;
+      right: -15%;
+    }
+  }
+
+  .product-card:first-child, 
+  .product-card:nth-last-child(2) {
+    position: absolute;
+    left: calc(-50% - 2.25rem);
+    width: 70%;
+
+    @include responsive(md) {
+      width: 40%;
+      left: calc(-27% - 2.25rem);
+    }
+
+    @include responsive(xl) {
+      width: 32.50%;
+      left: -15%;
+    }
+  }
+
+  .product-card:nth-last-child(2) {
+    left: auto;
+    right: calc(-50% - 2.25rem);
+
+    @include responsive(md) {
+      position: relative;
+      width: 40%;
+      left: 10%;
+      right: auto;
+    }
+
+    @include responsive(xl) {
+      width: 32.50%;
+      left: calc(15% + 2.9rem);
+    }
+  }
+
+ .carousel-item-next:not(.carousel-item-left),
+  .carousel-item-right.active {
+    -webkit-transform: translate3d(calc(69% + 0.5px), 0, 0);
+    transform: translate3d(calc(69% + 0.5px), 0, 0);
+
+    @include responsive(md) {
+      -webkit-transform: translate3d(40%, 0, 0);
+      transform: translate3d(40%, 0, 0);
+    }
+
+    @include responsive(xl) {
+      -webkit-transform: translate3d(32.5%, 0, 0);
+      transform: translate3d(32.5%, 0, 0);
+    }
+
+    .carousel-control {
+      display: none;
+    }
+  }
+
+  .carousel-item-prev:not(.carousel-item-right),
+  .carousel-item-left.active {
+    -webkit-transform: translate3d(calc(-69% - 0.5px), 0, 0);
+    transform: translate3d(calc(-69% - 0.5px), 0, 0);
+
+    @include responsive(md) {
+      -webkit-transform: translate3d(-40%, 0, 0);
+      transform: translate3d(-40%, 0, 0);
+    }
+
+    @include responsive(xl) {
+      -webkit-transform: translate3d(-32.5%, 0, 0);
+      transform: translate3d(-32.5%, 0, 0);
+    }
+
+    .carousel-control {
+      display: none;
+    }
+  }
+}

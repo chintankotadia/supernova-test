@@ -1,0 +1,13 @@
+/**
+ * Holds all the fonts
+ *
+ * @author Chintan Kotadia <kotadiachintan@gmail.com>
+ */
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url($fonts-path + 'sofia-pro-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

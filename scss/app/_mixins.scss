@@ -1,0 +1,58 @@
+/**
+ * Holds all the mixins
+ *
+ * @author Chintan Kotadia <kotadiachintan@gmail.com>
+ */
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+//@todo: Support custom breakpoints by passing screen-width
+@mixin responsive($media, $max: false) {
+  @each $name, $value in $grid-breakpoints {
+    @if $name == $media {
+      @if $max == true {
+        @media only screen and (max-width: $value -1) {
+          @content;
+        }
+      }
+      @else {
+        @media only screen and (min-width: $value) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin elements {
+  input[type="text"], input[type="password"],
+  input[type="date"],input[type="datetime"],
+  input[type="email"], input[type="number"],
+  input[type="search"], input[type="tel"],
+  input[type="time"], input[type="url"],
+  textarea, select {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
